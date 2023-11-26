@@ -17,7 +17,9 @@
         <input value="1" id="color_mode" name="color_mode" type="checkbox">
         <label class="btn-color-mode-switch-inner" data-off="AM" data-on="PM" for="color_mode"></label>
     </label>
-  
+    <p>
+        HAI TEST PUSH
+    </p>
 </div>
 </body>
 </html>
