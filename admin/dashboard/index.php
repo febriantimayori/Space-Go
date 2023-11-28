@@ -1,6 +1,3 @@
-
-<!-- <title>Dashboard</title> -->
-
 <head>
     <title>Dashboard</title>
 </head>
@@ -24,7 +21,7 @@
 
                         </div>
                         <div class="col my-3">
-                            <h5 class="card-title">RUANG KOSONG</h5>
+                            <h5 class="card-title" style="font-size: 17px;">RUANG KOSONG</h5>
                             <p class="card-text">?</p>
                         </div>
                             
@@ -41,7 +38,7 @@
 
                         </div>
                         <div class="col my-3">
-                            <h5 class="card-title">PEMINJAMAN</h5>
+                            <h5 class="card-title" style="font-size: 17px;">PEMINJAMAN</h5>
                             <p class="card-text">?</p>
                             <!-- <p class="card-text">Total anggota sejumlah <?= $row_anggota['jml'] ?> orang.</p> -->
                         </div>
@@ -59,7 +56,7 @@
 
                         </div>
                         <div class="col my-3">
-                            <h5 class="card-title">HISTORY</h5>
+                            <h5 class="card-title" style="font-size: 17px;">HISTORY</h5>
                             <p class="card-text">?</p>
                             <!-- <p class="card-text">Total anggota sejumlah <?= $row_anggota['jml'] ?> orang.</p> -->
                         </div>

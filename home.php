@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>W3.CSS Template</title>
+<title>Perkenalan</title>
+<link href="assets/icon/logo.png" rel="icon">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -24,9 +26,12 @@
         justify-content: center;
         flex-direction: column;
         height: 100vh;
+        width: 100vw;
         background: url('assets/img/bg-home.png');
         background-repeat: no-repeat;
         background-size: cover;
+        background-attachment: fixed;
+        background-position: bottom;
     }
 
     .logo{
@@ -118,26 +123,31 @@
     <div class="logo">
         <div class="custom-div">
             <img src="assets/img/logo-polinema.png" alt="Logo 1" height="65px" style="margin-right: 16px;">
-            <img src="assets/img/logo-h-copy.png" alt="Logo" height="45px" style="margin-right: 16px;">
+            <img src="assets/img/logo-hs.png" alt="Logo" height="45px" style="margin-right: 16px;">
             <img src="assets/img/logo-jti.png" alt="Logo 2" height="60px" style="margin-right: 16px;">
         </div>
     </div>
     <div class="text">
         <h3 class="w3-margin"><b>What Website is This?</b></h3>
         <p class="w3-large">
-            Ayo berkenalan dengan website “Space Go”. "Space Go" merupakan situs keren buat booking ruangan di JTI Politeknik Negeri Malang, loh! Jadi, kalau lagi butuh ruangan buat bikin acara atau rapat, bisa cek di sini. Desain antarmukanya mudah banget, bisa lihat ruangan yang kosong dan langsung booking. Simpel! Mudah! Dan Praktis! 
-            "Space Go" bisa jadi pilihan yang oke untuk meminjam ruangan pada JTI! 🚀✨
+        Ayo berkenalan dengan website "Space Go", sebuah situs web untuk pemesanan ruangan di Jurusan Teknologi Informasi Politeknik Negeri Malang. 
+        Jika Anda membutuhkan ruangan untuk acara atau rapat, "Space Go" adalah wadah yang tepat bagi warga Polinema. 🚀✨
         </p>
     </div>
-    <div>
-        <a href="login_user.php">
-            <button class="button btn-login"><b>LOGIN</b></button>
-        </a>
-        <a href="register.php">
-            <button class="button btn-register"><b>REGISTER</b></button>
-        </a>
+    <div class="row">
+        <button class="button btn-login" onclick="ToLogin()"><b>LOGIN</b></button>
+        <button class="button btn-register" onclick="ToRegister()"><b>REGISTER</b></button>
     </div>
 </div>
 
 </body>
+<script>
+    function ToLogin() {
+        window.location.href = "login.php";
+    }
+
+    function ToRegister() {
+        window.location.href = "register.php"; // Ganti dengan nama halaman register yang sesuai
+    }
+</script>
 </html>

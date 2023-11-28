@@ -72,7 +72,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #fff;">
 
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="../assets/img/logo-hs.png" style="width: 50px; height; 50px;"></a>
+                <a class="navbar-brand" href="#"><img src="../assets/icon/logo.png" style="width: 60px; height: 60px;"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
