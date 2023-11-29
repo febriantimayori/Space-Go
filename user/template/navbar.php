@@ -1,9 +1,15 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+        <!-- Bootstrap Date picker -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@4.3.2/dist/css/bootstrap-datepicker.min.css">
+
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../assets/icon/logo.png" rel="icon">
+
         <style>
             * {
                 font-family: "Montserrat";
@@ -65,11 +71,14 @@
                 width: 100%;
                 left: 0;
             }
+
+            .underline {
+                border-bottom: 2px solid #000;
+            }
         </style>
-        <title>Home</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #fff;">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fff;">
 
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img src="../assets/icon/logo.png" style="width: 60px; height: 60px;"></a>
@@ -80,25 +89,25 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
+                            <a class="nav-link" aria-current="page" href="index.php" id="nav-home">
                                 HOME
                                 <span class="underline"></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="ruang.php" id="nav-ruang">
                                 RUANG
                                 <span class="underline"></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">
+                            <a class="nav-link" aria-current="page" href="peminjaman.php" id="nav-peminjaman">
                                 PEMINJAMAN
                                 <span class="underline"></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="history.php" id="nav-history">
                                 HISTORY
                                 <span class="underline"></span>
                             </a>
@@ -139,4 +148,12 @@
     });
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-eJqjNBlHHPiKu1BAA00F8BAGxNCcxVg7BZ5eF5/R+8UJ5mDlZ0L3pA5BvcE9P3m" crossorigin="anonymous"></script>
+
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script>
+<script src="../assets/custom/dashboard.js"></script>
+
+<!-- Bootstrap Date Picker -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@4.3.2/dist/js/bootstrap-datepicker.min.js"></script>
 </html>
