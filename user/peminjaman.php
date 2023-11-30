@@ -7,10 +7,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
     <title>Peminjaman</title>
 
     <style>
-
         body {
             background-color: #2A1A5E;
         }
@@ -48,6 +49,51 @@
             background-color: #FFBD2E;
             color: #fff;
         }
+
+        .search {
+            border-radius: 10px;
+            background: #D9D9D9;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+            width: 497px;
+            height: 35px;
+            flex-shrink: 0;
+        }
+
+        .icon {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            left: 463px;
+            top: 25%;
+        }
+
+        /* .icon-2 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            left: 679px;
+            top: 23%;
+        } */
+
+        .form-inline input{
+            padding-right: 50px;
+        }
+
+        .search::-webkit-search-cancel-button,
+        .search::-webkit-search-clear-button {
+            appearance: none;
+            display: none;
+        }
+
+        .datepicker {
+            border-radius: 10px;
+            background: #D9D9D9;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+            width: 175px;
+            height: 35px;
+            flex-shrink: 0;
+            padding-left: 15px;
+        }
     </style>
 </head>
 <body>
@@ -56,9 +102,24 @@
         <div class="card mt-4" style="border: 0; border-radius: 20px;">
             <div class="card-body">
                 <nav class="navbar navbar-light" style="border-radius: 15px;">
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    </form>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <form class="form-inline">
+                                <input class="form-control mr-sm-2 search" id="myInput" type="search" placeholder="Search by Nama Ruang" aria-label="Search">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 35 35" fill="none">
+                                        <circle cx="15.0251" cy="15.0249" r="12.75" stroke="black" stroke-width="3"/>
+                                        <path d="M24.375 24.375L33.3906 33.3906" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-3">
+                            <form action="">
+                                <input class="form-control mr-sm-2 datepicker" type="date" placeholder=".col-md-3" aria-label="Search">
+                            </form>
+                        </div>
+                    </div>
                 </nav>
                 
                 <div class="table-responsive small pt-3 px-3">
@@ -115,14 +176,11 @@
                             </div>
                             <div class="mb-3" id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
                                 <label for="recipient-name" class="col-form-label">Tanggal Pinjam: </label>
-                                    <input placeholder="Select date" type="text" id="example" class="form-control">
-                                    <i class="fas fa-calendar input-prefix"></i>
+                                    <input placeholder="Select date" type="date" id="example" class="form-control">
                             </div>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Tanggal Kembali:</label>
-                                <select class="form-select text-modal-custom" name="fasilitas" name aria-label="Default select example">
-                                    <!-- <option selected>tanggal</option> -->
-                                </select>
+                                    <input placeholder="Select date" type="date" id="example" class="form-control">
                             </div>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Kode Ruang:</label>
@@ -157,5 +215,38 @@
     $('.datepicker').datepicker({
     inline: true
     });
+
+    //select date
+    $(document).ready(function() {
+        $('#myDateInput').datepicker({
+            format: 'yyyy-mm-dd',
+            autoclose: true,
+            todayHighlight: true,
+            templates: {
+                leftArrow: '<i class="fas fa-chevron-left"></i>',
+                rightArrow: '<i class="fas fa-chevron-right"></i>'
+            }
+        });
+    });
+
+    //Search
+    $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+
+    //Search
+    $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
 </script>
 </html>

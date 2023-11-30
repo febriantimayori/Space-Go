@@ -95,18 +95,18 @@
                                 <div id="carouselContent" class="carousel slide carousel" data-ride="carousel">
                                     <div class="carousel-inner" role="listbox">
                                         <div class="carousel-item active text-center pt-2">
-                                            <p>Lantai 5</p>
-                                        </div>
-                                        <div class="carousel-item text-center pt-2">
                                             <p>Lantai 6</p>
                                         </div>
+                                        <div class="carousel-item text-center pt-2">
+                                            <p>Lantai 5</p>
+                                        </div>
                                     </div>
-                                    <a class="carousel-control-prev" href="5.php" role="button" data-slide="prev">
+                                    <a class="carousel-control-prev" href="ruang.php" role="button" data-slide="prev">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                                         <path d="M19.7749 22.3999L19.7749 14.6124V7.59993C19.7749 6.39993 18.3249 5.79993 17.4749 6.64993L10.9999 13.1249C9.9624 14.1624 9.9624 15.8499 10.9999 16.8874L13.4624 19.3499L17.4749 23.3624C18.3249 24.1999 19.7749 23.5999 19.7749 22.3999Z" fill="#292D32"/>
                                     </svg>
                                     </a>
-                                    <a class="carousel-control-next" id="6" role="button" data-slide="next">
+                                    <a class="carousel-control-next" href="7.php" role="button" data-slide="next">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                                         <path d="M10.2251 7.60007L10.2251 15.3876V22.4001C10.2251 23.6001 11.6751 24.2001 12.5251 23.3501L19.0001 16.8751C20.0376 15.8376 20.0376 14.1501 19.0001 13.1126L16.5376 10.6501L12.5251 6.63757C11.6751 5.80007 10.2251 6.40007 10.2251 7.60007Z" fill="#292D32"/>
                                     </svg>
@@ -116,69 +116,35 @@
                         </div>
                     </div>
                 </nav>
-                
-                <div id="5">
-                    <div class="text-center pb-5">
-                        <img src="../assets/img/denah-lt-6.png">
-                        <img src="../assets/img/ket-lt-5.png">
-                    </div>
-                    
-                    <div class="table-responsive small pt-3 px-3">
-                        <table class="table"> 
-                            <thead>
-                                <tr>
-                                    <th scope="col">KODE RUANG</th>
-                                    <th scope="col">NAMA RUANG</th>
-                                    <th scope="col">AKSI</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        test
-                                    </td>
-                                    <td>
-                                        test
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-detail" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-whatever="@mdo"> Detail</button>
-                                    </td>
-                                </tr>
-                            </tbody>  
-                        </table>
-                    </div>
-                </div>
 
-                <div id="6">
-                    <div class="text-center pb-5">
-                        <img src="../assets/img/denah-lt-6.png">
-                        <img src="../assets/img/ket-lt-5.png">
-                    </div>
-                    
-                    <div class="table-responsive small pt-3 px-3">
-                        <table class="table"> 
-                            <thead>
-                                <tr>
-                                    <th scope="col">KODE RUANG</th>
-                                    <th scope="col">NAMA RUANG</th>
-                                    <th scope="col">AKSI</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        test
-                                    </td>
-                                    <td>
-                                        test
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-detail" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-whatever="@mdo"> Detail</button>
-                                    </td>
-                                </tr>
-                            </tbody>  
-                        </table>
-                    </div>
+                <div class="text-center pb-5">
+                    <img src="../assets/img/denah-lt-5.png">
+                    <img src="../assets/img/ket-lt-5.png">
+                </div>
+                
+                <div class="table-responsive small pt-3 px-3">
+                    <table class="table"> 
+                        <thead>
+                            <tr>
+                                <th scope="col">KODE RUANG</th>
+                                <th scope="col">NAMA RUANG</th>
+                                <th scope="col">AKSI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    test
+                                </td>
+                                <td>
+                                    test
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-detail" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-whatever="@mdo"> Detail</button>
+                                </td>
+                            </tr>
+                        </tbody>  
+                    </table>
                 </div>
             </div>
         </div>
@@ -246,7 +212,7 @@
     </div>
     <script>
         $(document).ready(function(){
-            $('#6').carousel();
+            $('#carouselContent').carousel();
         });
     </script>
 </body>

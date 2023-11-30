@@ -22,6 +22,33 @@
             background-color: #FB9224;
             color: #fff;
         }
+
+        .search {
+            border-radius: 10px;
+            background: #D9D9D9;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+            width: 497px;
+            height: 35px;
+            flex-shrink: 0;
+        }
+
+        .icon {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            left: 463px;
+            top: 25%;
+        }
+
+        .form-inline input{
+            padding-right: 50px;
+        }
+
+        .search::-webkit-search-cancel-button,
+        .search::-webkit-search-clear-button {
+            appearance: none;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -29,9 +56,19 @@
         <div class="card mt-4" style="border: 0; border-radius: 20px;">
             <div class="card-body">
                 <nav class="navbar navbar-light" style="border-radius: 15px;">
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    </form>
+                    <div div class="row">
+                        <div class="col-md-9">
+                            <form class="form-inline">
+                                <input class="form-control mr-sm-2 search" id="myInput" type="search" placeholder="Search by Nama Peminjam" aria-label="Search">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 35 35" fill="none">
+                                        <circle cx="15.0251" cy="15.0249" r="12.75" stroke="black" stroke-width="3"/>
+                                        <path d="M24.375 24.375L33.3906 33.3906" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </nav>
                 
                 <div class="table-responsive small pt-3 px-3">
